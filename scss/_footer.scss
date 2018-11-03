@@ -1,0 +1,27 @@
+.footer {
+    margin-top: 4rem;
+    height: 300px;
+    background-image: url(../img/footer.jpg);
+    background-position: center;
+    h4 {
+        text-align: center;
+        font-size: 1.5rem;
+        font-family: NIramit;
+        padding-top: 2rem;
+        color: #fff;
+    }
+
+    .fan-page {
+        text-align: center;
+            a {
+                text-decoration: none;
+                font-size: 2rem;
+                display: inline-block;
+                margin: .3rem;
+                color: var(--secundary-color);
+                &:active {
+                    color: var(--bc-about);
+                }
+            }
+    }
+}

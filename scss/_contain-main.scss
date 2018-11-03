@@ -1,0 +1,63 @@
+.main-container {
+    .jobs-cards {
+        margin-right: 1rem;
+        margin-left: 1rem;
+        & > h2 {
+            text-align: center;
+            font-family: Niramit;
+        }
+    }
+    
+    .article-card {
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        .info-card {
+            background-color: var(--secundary-color);
+            padding: 1rem;
+            box-sizing: border-box;
+            font-family: Raleway;
+            font-weight: 600;
+            margin-bottom: 3rem;
+            .title-card {
+                margin: 0;
+                    a {
+                        display: block;
+                        color: black;
+                        text-decoration: none;
+                        &:active {
+                            text-decoration-line: underline;
+                        }
+                    }
+            }
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    .about-me {
+        .info-about-me {
+            background-color: var(--bc-about);
+            padding: 2rem 1rem 3rem 2rem;
+
+            h3 {
+                font-size: 1.5rem;
+                font-family: Niramit;
+                font-weight: 600;
+            }
+
+            p {
+                font-family: Raleway;
+            }
+        }
+
+        .img-about-me {
+            width: 100%;
+        }
+
+    }
+
+}

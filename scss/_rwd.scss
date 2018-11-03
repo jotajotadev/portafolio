@@ -1,0 +1,172 @@
+$small: 480px;
+$tablet: 768px;
+$mediun: 992px;
+$large: 1366px;
+
+/* For movile */
+@media screen and (min-width: $small){
+    .main-container {
+        .jobs-cards {
+            padding-top: 70px;
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            & > h2 {
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                right: 0;
+            }
+        }
+    }
+}
+
+/* for tablet */
+@media screen and (min-width: $tablet){
+    .main-container {
+        .jobs-cards {
+            padding-top: 70px;
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            & .article-card:last-child {
+                grid-column: 2;
+            }
+        }
+        .about-me {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            height: 345px; 
+            background-color: teal;
+            .info-about-me {
+
+            }
+    
+            .img-about-me {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+/* for desktop */
+
+@media screen and (min-width: $mediun){
+    .header {
+
+        .email {
+            display: block;
+            font-family: Raleway;
+            color: var(--color-text-secundary);
+            font-size: .8rem;
+            letter-spacing: .1rem;
+            position: absolute;
+            height: 100%;
+            margin:  0 auto;
+            top: 0;
+            left: 0;
+            right: 0; 
+            width: 200px;
+            line-height: 50px;
+            text-align: center;
+        }
+        .toggle {
+            display: none;
+        }
+        .navigation-header {
+            font-family: Raleway;
+            display: block;
+            .lista-header {
+                margin: 0;
+                padding-left: 0;
+                list-style-type: none;
+                box-sizing: border-box;
+                display: flex;
+                li {
+                    border-bottom: none;
+                    a {
+                        padding: 1rem 1rem;
+                        color: white;
+                        display: inline-block;
+                        text-decoration: none;
+                        font-size: .9rem;
+                        margin-left: 1rem;
+                        &:hover {
+                            background-color: var(--secundary-color);
+                            color: var(--color-text-title);
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .main-container {
+        .jobs-cards {
+            padding-top: 70px;
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin-bottom: 70px;
+            & .article-card:last-child {
+                grid-column: 4;
+            }
+            .article-card {
+                position: relative;
+                .info-card {
+                    display: none;
+                }
+                &:hover {
+                    .info-card {
+                        display: block;
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                        margin: 0;
+                        .title-card {
+                            a {
+                                &:hover {
+                                    text-decoration-line: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .about-me {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            height: 345px; 
+            background-color: teal;
+            .info-about-me {
+
+            }
+    
+            .img-about-me {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .footer {
+        a {
+            &:hover {
+                color: var(--bc-about);
+            }
+        }
+    }
+}
+
+//max size
+@media screen and (min-width: $large){
+    #wrapper-main {
+        max-width: 1366px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
