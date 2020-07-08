@@ -1,4 +1,9 @@
 .main-container {
+    .title-jobs {
+        text-align: center;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 800;
+    }
     .jobs-cards {
         margin-right: 1rem;
         margin-left: 1rem;
@@ -51,6 +56,8 @@
 
             p {
                 font-family: Raleway;
+                max-width:  360px;
+                line-height: 1.5em;
             }
         }
 
