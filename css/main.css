@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Niramit:600|Raleway");
 /*
 
@@ -21,6 +20,24 @@
 
 .header {
   background-color: var(--bc-head-footer);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.header .logotipo {
+  border-radius: 50%;
+  width: 42px;
+}
+
+.header .max-width {
+  max-width: 1366px;
+  margin-left: auto;
+  margin-right: auto;
   display: fleX;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -28,16 +45,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: fixed;
-  top: 0;
-  z-index: 5;
-  width: 100%;
-}
-
-.header .logotipo {
-  width: 18px;
-  height: 40px;
-  padding-left: 2rem;
 }
 
 .header .email {
@@ -68,10 +75,11 @@
   display: block;
   position: absolute;
   top: 100%;
+  left: 0;
   width: 100%;
 }
 
-.header .show-nav .lista-header {
+.header .show-nav .list-header {
   margin: 0;
   list-style-type: none;
   -webkit-box-sizing: border-box;
@@ -80,11 +88,11 @@
   padding-bottom: 3rem;
 }
 
-.header .show-nav .lista-header li {
+.header .show-nav .list-header .item-list-header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.header .show-nav .lista-header li a {
+.header .show-nav .list-header .item-list-header .link-list-header {
   padding: 1rem 0;
   color: white;
   display: inline-block;
@@ -94,19 +102,20 @@
 }
 
 .banner {
-  margin: 0;
+  margin-top: 48px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+  max-width: 1366px;
   position: relative;
-  height: 100vh;
+  background-image: url(../img/banner.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 660px;
 }
 
-.banner img {
-  height: 100vh;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.banner figcaption {
+.banner .banner-details {
   background-image: linear-gradient(45deg, rgba(12, 110, 238, 0.5), rgba(22, 22, 22, 0.6));
   position: absolute;
   top: 0;
@@ -134,188 +143,299 @@
   padding-right: 2rem;
 }
 
-.banner figcaption span {
+.banner .banner-details .main-title {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.banner .banner-details .span-title {
   display: block;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #ddd;
 }
 
-.main-container .title-jobs {
-  text-align: center;
-  font-family: 'Raleway', sans-serif;
+.title {
   font-weight: 800;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
-.main-container .jobs-cards {
-  margin-right: 1rem;
-  margin-left: 1rem;
-}
-
-.main-container .jobs-cards > h2 {
-  text-align: center;
-  font-family: Niramit;
-}
-
-.main-container .article-card img {
+.item-image {
+  display: block;
   width: 100%;
-  display: block;
+  margin-bottom: 1rem;
 }
 
-.main-container .article-card .info-card {
-  background-color: var(--secundary-color);
-  padding: 1rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: Raleway;
-  font-weight: 600;
-  margin-bottom: 3rem;
-}
-
-.main-container .article-card .info-card .title-card {
-  margin: 0;
-}
-
-.main-container .article-card .info-card .title-card a {
-  display: block;
-  color: black;
+.button {
+  background-color: #4f0a66;
+  color: #fff;
+  font-family: 'Niramit', sans-serif;
   text-decoration: none;
+  display: inline-block;
+  padding: .5rem 1rem;
 }
 
-.main-container .article-card .info-card .title-card a:active {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+.button:hover {
+  background-color: #ff7300;
 }
 
-.main-container .article-card .info-card p {
-  margin: 0;
+.main-container {
+  max-width: 1366px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.main-container .about-me .info-about-me {
-  background-color: var(--bc-about);
-  padding: 2rem 1rem 3rem 2rem;
+.main-container .section-jobs {
+  padding-top: 4rem;
+  margin-bottom: 6rem;
 }
 
-.main-container .about-me .info-about-me h3 {
-  font-size: 1.5rem;
-  font-family: Niramit;
-  font-weight: 600;
-}
-
-.main-container .about-me .info-about-me p {
-  font-family: Raleway;
-  max-width: 360px;
-  line-height: 1.5em;
-}
-
-.main-container .about-me .img-about-me {
-  width: 100%;
-}
-
-.footer {
-  margin-top: 4rem;
-  height: 300px;
-  background-image: url(../img/footer.jpg);
-  background-position: center;
-}
-
-.footer h4 {
+.main-container .section-jobs .title-jobs {
   text-align: center;
-  font-size: 1.5rem;
-  font-family: NIramit;
-  padding-top: 2rem;
+}
+
+.main-container .section-jobs .description {
+  font-family: 'Niramit', sans-serif;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  text-align: center;
+}
+
+.main-container .container-items-web-design .item-image {
+  margin-bottom: 0;
+}
+
+.main-container .container-items-web-design .description-web-design {
+  background-color: #fff;
+  padding: 1.5rem;
+}
+
+.main-container .container-items-web-design .description-web-design .title {
+  padding-left: 0;
+}
+
+.main-container .container-items-web-design .description-web-design .about-web {
+  font-family: 'Niramit', sans-serif;
+  line-height: 1.3em;
+  max-width: 400px;
+}
+
+.main-container .section-about-me {
+  margin-bottom: 6rem;
+}
+
+.main-container .section-about-me .image-section {
+  display: none;
+  margin-bottom: 0;
+}
+
+.main-container .section-about-me .description-about-me {
+  background-color: #fff;
+  padding: 3rem;
+}
+
+.main-container .section-about-me .description-about-me .title {
+  padding-left: 0;
+}
+
+.main-container .section-about-me .description-about-me .text-about-me {
+  max-width: 400px;
+  font-family: 'Niramit', sans-serif;
+  line-height: 1.6em;
+}
+
+.main-container .section-contact {
+  background: #000;
+  padding: 3rem;
+  margin-bottom: 6rem;
+}
+
+.main-container .section-contact .title {
+  text-align: center;
   color: #fff;
 }
 
-.footer .fan-page {
-  text-align: center;
+.main-container .section-contact .fan-page {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.footer .fan-page a {
+.main-container .section-contact .fan-page .icon-fan-page {
   text-decoration: none;
+  color: gray;
   font-size: 2rem;
-  display: inline-block;
-  margin: .3rem;
-  color: var(--secundary-color);
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
-.footer .fan-page a:active {
-  color: var(--bc-about);
+.main-container .section-contact .fan-page .icon-fan-page:hover {
+  color: #fff301;
+}
+
+.footer {
+  background-color: var(--bc-head-footer);
+  padding: 3rem;
+}
+
+.footer .item-footer .title-item-footer {
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: 'Raleway', sans-serif;
+}
+
+.footer .item-footer .list-footer {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer .item-footer .list-footer .link-footer {
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer .legal-footer {
+  color: #fff;
 }
 
 /* For movile */
-@media screen and (min-width: 480px) {
-  .main-container .jobs-cards {
-    position: relative;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-  }
-  .main-container .jobs-cards > h2 {
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-}
-
 /* for tablet */
 @media screen and (min-width: 768px) {
-  .main-container .jobs-cards {
-    position: relative;
+  .container-items-graphic-design {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    grid-auto-rows: 300px;
+        grid-template-areas: "image-1 image-1 image-2" "image-1 image-1 image-3" "image-4 image-5 image-5" "image-4 image-5 image-5" "image-6 image-7 image-8";
   }
-  .main-container .diseño-web {
+  .container-items-graphic-design .item-image {
+    height: 100%;
+    background-color: red;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .container-items-graphic-design .item-image-graphic-design:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: image-1;
+  }
+  .container-items-graphic-design .item-image-graphic-design:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: image-2;
+  }
+  .container-items-graphic-design .item-image-graphic-design:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    grid-area: image-3;
+  }
+  .container-items-graphic-design .item-image-graphic-design:nth-child(4) {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: image-4;
+  }
+  .container-items-graphic-design .item-image-graphic-design:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-area: image-5;
+  }
+  .container-items-graphic-design .item-image-graphic-design:nth-child(6) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: image-6;
+  }
+  .container-items-graphic-design .item-image-graphic-design:nth-child(7) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+    grid-area: image-7;
+  }
+  .container-items-graphic-design .item-image-graphic-design:nth-child(8) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+    grid-area: image-8;
+  }
+  .container-items-web-design {
     display: -ms-grid;
     display: grid;
+    gap: 1rem;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
-  .main-container .ilustracion {
+  .container-items-ilustration {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+        grid-template-areas: "image-1 image-1 image-2" "image-1 image-1 image-3";
+    grid-auto-rows: 300px;
   }
-  .main-container .about-me {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-    -ms-grid-rows: auto;
-        grid-template-rows: auto;
-    height: 345px;
-    background-color: teal;
-  }
-  .main-container .about-me .img-about-me {
+  .container-items-ilustration .item-image {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .container-items-ilustration .item-image-ilustration:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: image-1;
+  }
+  .container-items-ilustration .item-image-ilustration:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: image-2;
+  }
+  .container-items-ilustration .item-image-ilustration:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    grid-area: image-3;
+  }
+  .main-container .section-about-me {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .main-container .section-about-me .image-section {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    display: block;
+    background-image: url(../img/sobre-mi-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .main-container .section-about-me > * {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
   }
 }
 
 /* for desktop */
 @media screen and (min-width: 992px) {
-  .header .email {
-    display: block;
-    font-family: Raleway;
-    color: var(--color-text-secundary);
-    font-size: .8rem;
-    letter-spacing: .1rem;
-    position: absolute;
-    height: 100%;
-    margin: 0 auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 200px;
-    line-height: 50px;
-    text-align: center;
+  .main-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
   .header .toggle {
     display: none;
@@ -324,7 +444,7 @@
     font-family: Raleway;
     display: block;
   }
-  .header .navigation-header .lista-header {
+  .header .navigation-header .list-header {
     margin: 0;
     padding-left: 0;
     list-style-type: none;
@@ -334,10 +454,10 @@
     display: -ms-flexbox;
     display: flex;
   }
-  .header .navigation-header .lista-header li {
+  .header .navigation-header .list-header .item-list-header {
     border-bottom: none;
   }
-  .header .navigation-header .lista-header li a {
+  .header .navigation-header .list-header .item-list-header .link-list-header {
     padding: 1rem 1rem;
     color: white;
     display: inline-block;
@@ -345,65 +465,49 @@
     font-size: .9rem;
     margin-left: 1rem;
   }
-  .header .navigation-header .lista-header li a:hover {
+  .header .navigation-header .list-header .item-list-header .link-list-header:hover {
     background-color: var(--secundary-color);
     color: var(--color-text-title);
     font-weight: 700;
   }
-  .main-container .jobs-cards {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
-    grid-auto-flow: dense;
-    margin-bottom: 70px;
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
-  .main-container .jobs-cards .article-card {
-    position: relative;
+  .footer .item-footer {
+    margin-right: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 3rem;
   }
-  .main-container .jobs-cards .article-card .info-card {
-    display: none;
-  }
-  .main-container .jobs-cards .article-card:hover .info-card {
-    display: block;
-    position: absolute;
-    bottom: 0;
+  .footer .legal-footer {
+    text-align: center;
     width: 100%;
-    margin: 0;
-  }
-  .main-container .jobs-cards .article-card:hover .info-card .title-card a:hover {
-    -webkit-text-decoration-line: underline;
-            text-decoration-line: underline;
-  }
-  .main-container .diseño-web {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-  }
-  .main-container .about-me {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-    -ms-grid-rows: auto;
-        grid-template-rows: auto;
-    height: 345px;
-    background-color: lime;
-  }
-  .main-container .about-me .img-about-me {
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .footer a:hover {
-    color: var(--bc-about);
   }
 }
 
-@media screen and (min-width: 1366px) {
-  #wrapper-main {
-    max-width: 1366px;
-    margin-left: auto;
-    margin-right: auto;
+@media screen and (min-width: 1330px) {
+  .main-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .main-container .container-items-graphic-design {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 350px;
+        grid-template-areas: "image-1 image-1 image-2 image-3" "image-1 image-1 image-4 image-4" "image-5 image-6 image-8 image-8" "image-5 image-7 image-8 image-8";
+  }
+  .main-container .container-items-ilustration {
+    grid-auto-rows: 370px;
+  }
+  .main-container .container-items-web-design {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
   }
 }
 /*# sourceMappingURL=main.css.map */

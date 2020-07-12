@@ -1,53 +1,101 @@
 $small: 480px;
 $tablet: 768px;
 $mediun: 992px;
-$large: 1366px;
+$large: 1330px;
 
 /* For movile */
 @media screen and (min-width: $small){
-    .main-container {
-        .jobs-cards {
-            position: relative;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            & > h2 {
-                position: absolute;
-                display: block;
-                top: 0;
-                left: 0;
-                right: 0;
-            }
-        }
-    }
+    
 }
 
 /* for tablet */
 @media screen and (min-width: $tablet){
+    .container-items-graphic-design {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        grid-auto-rows: 300px;
+        grid-template-areas: 
+            "image-1 image-1 image-2"
+            "image-1 image-1 image-3"
+            "image-4 image-5 image-5"
+            "image-4 image-5 image-5"
+            "image-6 image-7 image-8"
+        ;
+        
+
+        .item-image {
+            height: 100%;
+            background-color: red;
+            object-fit: cover;
+        }
+        .item-image-graphic-design:nth-child(1) {
+            grid-area: image-1;
+        }
+        .item-image-graphic-design:nth-child(2) {
+            grid-area: image-2;
+        }
+        .item-image-graphic-design:nth-child(3) {
+            grid-area: image-3;
+        }
+        .item-image-graphic-design:nth-child(4) {
+            grid-area: image-4;
+        }
+        .item-image-graphic-design:nth-child(5) {
+            grid-area: image-5;
+        }
+        .item-image-graphic-design:nth-child(6) {
+            grid-area: image-6;
+        }
+        .item-image-graphic-design:nth-child(7) {
+            grid-area: image-7;
+        }
+        .item-image-graphic-design:nth-child(8) {
+            grid-area: image-8;
+        }
+    }
+    .container-items-web-design {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .container-items-ilustration {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        grid-template-areas:
+            "image-1 image-1 image-2"
+            "image-1 image-1 image-3"
+        ;
+        grid-auto-rows: 300px;
+        .item-image {
+            height: 100%;
+            object-fit: cover;
+        }
+        .item-image-ilustration:nth-child(1) {
+            grid-area: image-1;
+        }
+        .item-image-ilustration:nth-child(2) {
+            grid-area: image-2;
+        }
+        .item-image-ilustration:nth-child(3) {
+            grid-area: image-3;
+        }
+    }
     .main-container {
-        .jobs-cards {
-            position: relative;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-        }
-        .diseño-web {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-        }
-        .ilustracion {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-        }
-        .about-me {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: auto;
-            height: 345px; 
-            background-color: teal;
-    
-            .img-about-me {
-                height: 100%;
-                object-fit: cover;
+        .section-about-me {
+            display: flex;
+            .image-section {
+                order: 1;
+                display: block;
+                background-image: url(../img/sobre-mi-2.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
             }
+        }
+        .section-about-me > * {
+            flex-basis: 50%;
         }
     }
 }
@@ -55,39 +103,26 @@ $large: 1366px;
 /* for desktop */
 
 @media screen and (min-width: $mediun){
+    .main-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
     .header {
-
-        .email {
-            display: block;
-            font-family: Raleway;
-            color: var(--color-text-secundary);
-            font-size: .8rem;
-            letter-spacing: .1rem;
-            position: absolute;
-            height: 100%;
-            margin:  0 auto;
-            top: 0;
-            left: 0;
-            right: 0; 
-            width: 200px;
-            line-height: 50px;
-            text-align: center;
-        }
         .toggle {
             display: none;
         }
         .navigation-header {
             font-family: Raleway;
             display: block;
-            .lista-header {
+            .list-header {
                 margin: 0;
                 padding-left: 0;
                 list-style-type: none;
                 box-sizing: border-box;
                 display: flex;
-                li {
+                .item-list-header {
                     border-bottom: none;
-                    a {
+                    .link-list-header {
                         padding: 1rem 1rem;
                         color: white;
                         display: inline-block;
@@ -104,65 +139,47 @@ $large: 1366px;
             }
         }
     }
-    .main-container {
-        .jobs-cards {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-auto-flow: dense;
-            margin-bottom: 70px;
-            .article-card {
-                position: relative;
-                .info-card {
-                    display: none;
-                }
-                &:hover {
-                    .info-card {
-                        display: block;
-                        position: absolute;
-                        bottom: 0;
-                        width: 100%;
-                        margin: 0;
-                        .title-card {
-                            a {
-                                &:hover {
-                                    text-decoration-line: underline;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        .diseño-web {
-            grid-template-columns: repeat(2, 1fr);
-        }
-        .about-me {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: auto;
-            height: 345px; 
-            background-color: lime;
-    
-            .img-about-me {
-                height: 100%;
-                object-fit: cover;
-            }
-        }
-    }
+
     .footer {
-        a {
-            &:hover {
-                color: var(--bc-about);
-            }
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .item-footer {
+            margin-right: 2rem;
+            margin-left: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .legal-footer {
+            text-align: center;
+            width: 100%;
         }
     }
 }
 
 //max size
 @media screen and (min-width: $large){
-    #wrapper-main {
-        max-width: 1366px;
-        margin-left: auto;
-        margin-right: auto;
+    .main-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        .container-items-graphic-design {
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 350px;
+            grid-template-areas: 
+                "image-1 image-1 image-2 image-3"
+                "image-1 image-1 image-4 image-4"
+                "image-5 image-6 image-8 image-8"
+                "image-5 image-7 image-8 image-8"
+            ;
+        }
+
+        .container-items-ilustration {
+            grid-auto-rows: 370px;
+        }
+            
+        .container-items-web-design {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
 }
