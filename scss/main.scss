@@ -1,7 +1,11 @@
-@import "fuentes";
-@import "colores";
-@import "header";
-@import "banner";
-@import "contain-main";
-@import "footer";
-@import "rwd"
+// se agrego algunos estilos a normalize
+@import "base/normalize";
+// se agrego algunos estilos a normalize
+@import "base/typography";
+@import "utils/variables";
+@import "utils/functions";
+@import "components/buttons";
+@import "layout/header";
+@import "layout/banner";
+@import "layout/contain-main";
+@import "layout/footer";

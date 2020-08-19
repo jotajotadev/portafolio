@@ -1,0 +1,21 @@
+:root {
+    --bg-head-footer: #1A1A1A;
+    --secundary-color: #FFB000;
+    --display-title-color: #F9F9F9;
+    --color-text-primary: #222;
+    //color para link del header y texto del hero
+    --color-text-secondary: #C4C4C4;
+
+    --bg-hero: #000;
+
+    --color-hidden-button: #fff;
+    --bg-btn-primary: #4249FF;
+    --bg-btn-primary-dark: #2228d8;
+    --color-btn-primary: #fff;
+}
+
+// medidas para responsive
+$small: 480px;
+$tablet: 768px;
+$mediun: 992px;
+$large: 1330px;

@@ -1,8 +1,13 @@
 .footer {
-    background-color: var(--bc-head-footer);
+    background-color: var(--bg-head-footer);
     padding: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 
     .item-footer {
+        margin-left: 2rem;
+        margin-right: 2rem;
         .title-item-footer {
             color: #fff;
             font-size: 1.2rem;
@@ -21,6 +26,9 @@
         }
     }
     .legal-footer {
+        margin-top: 6rem;
         color: #fff;
+        width: 100%;
+        text-align: center;
     }
 }
