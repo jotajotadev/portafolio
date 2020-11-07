@@ -1,7 +1,0 @@
-// de px to rem
-@function pxToRem($px, $base: 16){
-  $result: 0;
-  $result: ($px / $base) * 1rem;
-  @return $result;
-}
-

@@ -1,11 +1,2 @@
-// se agrego algunos estilos a normalize
-@import "base/normalize";
-// se agrego algunos estilos a normalize
-@import "base/typography";
-@import "utils/variables";
-@import "utils/functions";
-@import "components/buttons";
-@import "layout/header";
-@import "layout/banner";
-@import "layout/contain-main";
-@import "layout/footer";
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&family=Open+Sans:wght@400;600&display=swap');
+@import "layout/container"
