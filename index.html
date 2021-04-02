@@ -4,120 +4,121 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="Portafolio personal de Jose Flores | jotajotadev@gmail.com"/>
-    <meta name="keywords" content="diseño web, peru, diseño grafico">
+    <meta name="keywords" content="Diseñador UI, Peru">
     <link rel="icon" href="img/logo.ico"/>
     <link rel="stylesheet" href="css/normalize.css"/>
     <link rel="stylesheet" href="css/main.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <title>Jose Flores | Portafolio</title>
-    <script src="https://kit.fontawesome.com/075b67f81a.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div class="main-container">
-      <div class="full-with">
-        <div class="max-width">
-          <div class="hero">
-            <div class="wrap">
-              <a href="index.html" class="refresh-home">
-                <img src="img/logo.svg" alt="logo-jotajotadev">
-              </a>
-              <h1 class="main-title">Convierto bocetos en <strong>interfaces funcionales.</strong></h1>
-              <p class="description">Hola soy José Flores, Diseñador de Interfaces y un gran apasionado por las tecnologías web, como son HTML & CSS, con las que puedo maquetar las interfaces y llevarlas a código.</p>
-              <div class="center-button">
-                <a href="#contact" class="buton">Quiero Contactarte</a>
-              </div>
-              <div class="scroll-down">
-                <p>haz scroll para ver los proyectos</p>
-                <img src="img/scroll.svg" alt="haz scroll para ver los proyectos">
-              </div>
-            </div>
-            <div class="gost-image">
-              <img src="img/ilustration-small.png" alt="">
-            </div>
-          </div>
+    <header class="header">
+      <nav class="header-nav">
+        <a href="#sobre-mi" class="item-nav">Sobre mi</a>
+        <a href="#proyectos" class="item-nav">Proyectos</a>
+        <a href="#contacto" class="item-nav">Contacto</a>
+      </nav>
+    </header>
+
+    <div class="hero wrap" id="sobre-mi">
+      <div class="container-hero">
+        <img src="../img/foto.png" alt="foto de perfil">
+        <div class="content-hero">
+          <p class="top-text">Hola Soy</p>
+          <h1 class="main-title">José Flores</h1>
+          <p class="profession">Diseñador UI</p>
+          <p class="description-hero">
+            Ademas de ser Diseñador de Interfaces, <span>soy un gran apasionado por la técnologias web, las cuales me permiten llevar a código mis diseños.</span>
+          </p>
         </div>
       </div>
-      <img class="decoration" src="img/midle-circle.svg" alt="">
-      <main class="content-main">
-        <a href="https://www.behance.net/gallery/105838979/Diseno-web-Cursos-Online" class="item">
-          <img class="image-project" src="img/project-1.jpg" alt="imagen del proyecto">
-          <div class="details">
-            <div class="center-details">
-              <h2 class="title-datails">Boost</h2>
-              <p class="description-details">Diseño UI</p>
-            </div>
+    </div>
+    <main class="main  wrap">
+      <article class="skills">
+        <h3 class="subtitle">Skills</h3>
+        <div class="details-skills">
+          <section>
+            <h5 class="title-skills">Diseño UI</h5>
+            <p>Atomic Design</p>
+            <p>Figma</p>
+            <p>Prototipado</p>
+          </section>
+          <section>
+            <h5 class="title-skills">Web</h5>
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>Boostrap</p>
+          </section>
+        </div>
+      </article>
+
+      <article class="projects" id="proyectos">
+        <h3 class="subtitle">Proyectos</h3>
+        <section class="project">
+          <img class="image-project" src="../img/proyecto aprodeperu.jpg" alt="">
+          <div class="details-project">
+            <h5 class="title-project">ONG APRODE PERÚ</h5>
+            <p class="description">
+              En este proyecto me encargue del rediseño de la web, para ello cree el site map para tener una idea general de todo el sitio web, Seguidamente relize los wireframes que posteriormente se convirtieron en mockups. 
+            </p>
+            <a class="button" target="_blank" href="https://www.behance.net/gallery/109406185/ONG-Peru">ver proyecto en behance</a>
           </div>
-        </a>
-        <a href="https://www.behance.net/gallery/105838979/Diseno-web-Cursos-Online" class="item">
-          <img class="image-project" src="img/project-1.jpg" alt="imagen del proyecto">
-          <div class="details">
-            <div class="center-details">
-              <h2 class="title-datails">Boost</h2>
-              <p class="description-details">Diseño UI</p>
-            </div>
+        </section>
+        <section class="project">
+          <img class="image-project order" src="../img/proyecto boost.jpg" alt="">
+          <div class="details-project">
+            <h5 class="title-project">BOOST</h5>
+            <p class="description">
+              Me encargue del rediseño de la página de cursos, reduciendo en numero de interacciones que debe hacer el usuario para inscribirse a un curso. 
+            </p>
+            <a class="button" target="_blank" href="https://www.behance.net/gallery/105838979/Diseno-web-Cursos-Online">ver proyecto en behance</a>
           </div>
-        </a>
-        <a href="https://www.behance.net/gallery/105838979/Diseno-web-Cursos-Online" class="item">
-          <img class="image-project" src="img/project-1.jpg" alt="imagen del proyecto">
-          <div class="details">
-            <div class="center-details">
-              <h2 class="title-datails">Boost</h2>
-              <p class="description-details">Diseño UI</p>
-            </div>
+        </section>
+        <section class="project">
+          <img class="image-project" src="../img/proyecto w3schools.jpg" alt="">
+          <div class="details-project">
+            <h5 class="title-project">w3schools</h5>
+            <p class="description">
+              Rediseñe la interfaz del login, ademas de ello se mejoro el proceso de compra de examenes para certificaciones, esto se consiguio dividiendo las tareas en tres pasos, 1 eleccion de metodos de pago, 2 ingresar datos de la tarjeta, 3.- confirmación de la compra.
+            </p>
+            <a class="button" target="_blank" href="https://www.behance.net/gallery/107713685/Diseno-UI-W3schools">ver proyecto en behance</a>
           </div>
-        </a>
-        <a href="https://www.behance.net/gallery/105838979/Diseno-web-Cursos-Online" class="item">
-          <img class="image-project" src="img/project-1.jpg" alt="imagen del proyecto">
-          <div class="details">
-            <div class="center-details">
-              <h2 class="title-datails">Boost</h2>
-              <p class="description-details">Diseño UI</p>
-            </div>
+        </section>
+      </article>
+
+      <article class="contact" id="contacto">
+        <h3 class="subtitle">Contacto</h3>
+        <p class="description-content">Enviame un mensaje y muy pronto me pondre en contacto contigo</p>
+        <form action="https://formspree.io/f/mnqlqnqb" method="POST">
+          <div class="row">
+            <input class="input" type="text" name="name" placeholder="Nombre" required>
+            <input class="input" type="text" name="surname" placeholder="Apellido" required>
           </div>
-        </a>
-        <a href="https://www.behance.net/gallery/105838979/Diseno-web-Cursos-Online" class="item">
-          <img class="image-project" src="img/project-1.jpg" alt="imagen del proyecto">
-          <div class="details">
-            <div class="center-details">
-              <h2 class="title-datails">Boost</h2>
-              <p class="description-details">Diseño UI</p>
-            </div>
+          <div class="row">
+            <input class="input" type="email" name="email" placeholder="Correo" required>
+            <input class="input" type="tel" name="phone" placeholder="Celular" required>
           </div>
-        </a>
-        <a href="https://www.behance.net/gallery/105838979/Diseno-web-Cursos-Online" class="item">
-          <img class="image-project" src="img/project-1.jpg" alt="imagen del proyecto">
-          <div class="details">
-            <div class="center-details">
-              <h2 class="title-datails">Boost</h2>
-              <p class="description-details">Diseño UI</p>
-            </div>
-          </div>
-        </a>
-        
-      </main>
-      <footer class="footer" id="contact">
-        <h2 class="title-footer">Hey, recuerda que puedes ponerte en contacto conmigo en mis redes sociales.</h2>
-        <div class="social-networks">
-          <a href="mailto:jotajotadev@gmail.com" target="blank">
-            <img src="img/email.svg" alt="icono email">
+          <input class="input message" type="text" name="message" placeholder="Mensaje" required>
+          <input type="submit" class="button" value="ENVIAR">
+        </form>
+
+        <div class="social-contact">
+          <a href="https://www.instagram.com/flores_jotajota/" target="_blank">
+            <i class="fab fa-instagram"></i>
           </a>
-          <a href="https://wa.me/51970689745" target="blank">
-            <img src="img/whatsapp.svg" alt="icono whatsapp">
+          <a href="https://www.linkedin.com/in/jose-jesus-flores-41409a196/" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
           </a>
-          <a href="https://www.instagram.com/flores_jotajota/?hl=es-la" target="blank">
-            <img src="img/instagram.svg" alt="icono instagram">
+          <a href="https://github.com/jotajotadev" target="_blank">
+            <i class="fab fa-github-alt"></i>
           </a>
-          <a href="https://www.behance.net/jotajotadev" target="blank">
-            <img src="img/behance.svg" alt="icono behance">
-          </a>
-          <a href="https://www.linkedin.com/in/jose-jesus-flores-41409a196/" target="blank">
-            <img src="img/linkedin.svg" alt="icono linkdin">
-          </a>
-          <a href="https://github.com/jotajotadev" target="blank">
-            <img src="img/github.svg" alt="icono github">
+          <a href="https://wa.me/51970689745" target="_blank">
+            <i class="fab fa-whatsapp"></i>
           </a>
         </div>
-      </footer>
-    </div>
-    
+      </article>
+    </main>
   </body>
 </html>
